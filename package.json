@@ -1,0 +1,28 @@
+{
+  "name": "electron-vite-svelte",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:web": "vite",
+    "dev:electron": "nodemon --signal SIGINT --ext js,ts --exec 'pnpm build:electron && pnpm start:electron' --watch src-electron",
+    "build:web": "vite build",
+    "build:electron": "node tools/build/electron.mjs",
+    "start:electron": "electron dist-electron/main.cjs",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "1.0.0-next.37",
+    "@tsconfig/svelte": "2.0.1",
+    "electron": "17.0.0",
+    "esbuild": "0.14.21",
+    "nodemon": "2.0.15",
+    "svelte": "3.46.4",
+    "svelte-check": "2.4.3",
+    "svelte-preprocess": "4.10.3",
+    "tiny-glob": "0.2.9",
+    "tslib": "2.3.1",
+    "typescript": "4.5.5",
+    "vite": "2.8.0"
+  }
+}
