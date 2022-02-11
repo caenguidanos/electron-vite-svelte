@@ -1,6 +1,6 @@
+import path from "path";
 // Modules to control application life and create native browser window
 import { app, BrowserWindow } from "electron";
-import path from "path";
 
 const isProduction: boolean = process.env.NODE_ENV === "production";
 
